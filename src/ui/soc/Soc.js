@@ -9,10 +9,9 @@ width: 35px;
 height: 35px;
 margin: 0 7px 17px 7px;
 padding: 1px;
+transition: 0.1s;
 &:hover {
-  width: 37px;
-  height: 37px;
-  padding: 0;
+  transform: scale(1.1)
 }
 ;`
 const Nav = styled.div`

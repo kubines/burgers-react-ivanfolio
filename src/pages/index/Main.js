@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Box } from 'grid-styled'
+
 import Content from 'grid/Content'
 import { H1 } from 'ui/title/index'
 import Text from 'ui/text/Text'

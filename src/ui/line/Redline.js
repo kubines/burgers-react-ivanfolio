@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-const Readline = styled.span`
+const Redline = styled.span`
+display: block;
 width: 445px;
 height: 27px;
 background-color: #f13239;
 `;
 
-export default Readline
+export default Redline

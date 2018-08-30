@@ -8,6 +8,7 @@ display: flex;
 justify-content: space-between;
 font-size: 30px;
 `;
+
 const Link = styled.a`
 color: white;
 font-family: 'Open Sans';
@@ -29,7 +30,26 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       link: [
-        'О нас', 'Меню', 'Акции', 'Интерьер', ' Контакты'
+        {
+          text: 'О нас',
+          target: '#about'
+        },
+        {
+          text: 'Меню',
+          target: '#menu'
+        },
+        {
+          text: 'Акции',
+          target: '#sale'       
+        },
+        {
+          text: 'Интерьер',
+          target: '#interior'
+        },
+        {
+          name:'Контакты',
+          target: '#contacts'
+        }
       ],
       size: this.props.small
     }
@@ -39,12 +59,12 @@ export default class Menu extends Component {
     const listLink = this.state.link.map((item, index) => {
       if (this.state.size) {
         return (
-          <Link href='#' key={index} small>{item}</Link>
+          <Link href={item.target} key={index} small>{item.text}</Link>
         )
       }
       else {
         return (
-          <Link href='#' key={index}>{item}</Link>
+          <Link href={item.target} key={index}>{item.text}</Link>
         )
       }
     })

@@ -6,7 +6,7 @@ import Text from 'ui/text/Text'
 import icon1 from 'img/i-medal.png'
 import icon2 from 'img/i-chat.png'
 import icon3 from 'img/i-shaker.png'
-
+import Redline from 'ui/line/Redline'
 
 export default class WhyWe extends Component {
   constructor() {
@@ -32,7 +32,7 @@ export default class WhyWe extends Component {
   render() {
     const listItem = this.state.items.map((item, index) => {
       return (
-        <Box key={index} w={320} css={{ textAlign: 'center' }}>
+        <Box key={index} width={320} css={{ textAlign: 'center' }}>
           <img src={item.icon} />
           <Box mt={45} />
           <Text>
@@ -41,16 +41,20 @@ export default class WhyWe extends Component {
         </Box>
       )
     })
+
     return (
-      <Flex justifyContent='center'>
+      <Flex justifyContent='center' css={{position: 'relative'}}>  
         <Box margin={0} w={1170} css={{ height: '560px' }}>
           <H2 black small center>
             Почему мы ?
-          </H2>
+          </H2>         
           <Box mt={70} w={1180} css={{ display: 'flex', justifyContent: 'space-between' }}>
             {listItem}
           </Box>
         </Box>
+        <Box css={{position: 'absolute', right: '0', bottom: '-13.5px', zIndex: '10'}}>
+          <Redline />
+        </Box>    
       </Flex>
     )
   }

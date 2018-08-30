@@ -18,10 +18,10 @@ justify-content: space-between;
 export default class Footer extends Component {
   render() {
     return (
-      <Flex bg='#363636;'>
+      <Flex bg='#363636;' justify-content={'center'} >
         <Foot>
           <Logo />
-          <Box width={570}>
+          <Box width={570} ml={96}>
             <Soc />
             <Menu small={1} />
           </Box>

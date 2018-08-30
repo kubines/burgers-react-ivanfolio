@@ -6,8 +6,10 @@ import { H2 } from 'ui/title/index'
 import Content from 'grid/Content'
 import Text from 'ui/text/Text'
 import bg from 'img/bg-about.png'
+import Redline from 'ui/line/Redline'
 
 const Layout = styled.div`
+position: relative;
 width: 100%;
 height: 745px;
 background-image: url(${bg});
@@ -18,6 +20,9 @@ export default class About extends Component {
   render() {
     return (
       <Layout>
+        <Box css={{position: 'absolute', left: '0', top: '-13.5px'}}>
+          <Redline />
+        </Box>
         <Content>
           <Box pt={100}>
             <H2 yellow>
