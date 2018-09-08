@@ -1,26 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
+
 import { Flex, Box } from 'grid-styled'
-import styled from 'styled-components'
+
 import Logo from 'ui/logo/Logo'
 import Menu from 'ui/menu/Menu'
 import Text from 'ui/text/Text'
 
-const Head = styled.div`
-display: flex;
-width: 1230px;
-height: 130px;
-margin: 0 auto;
-justify-content: space-between;
-align-items: center;
-;`
-
-export default class Header extends Component {
+export default class Header extends React.Component {
   render() {
     return (
-      <Flex bg='#f13239'>
-        <Head>
+      <Flex 
+        bg='#f13239'
+        justifyContent='center'
+      >
+        <Box 
+          width={1230}
+          css={{
+            display: 'flex',
+            height: '130px',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            }}
+          >
           <Logo />
-          <Box w={180} h={80}>
+          <Box w={180}>
             <Text small white>
               Заказ столика +7 (391) 999-95-95
             </Text>
@@ -30,7 +33,7 @@ export default class Header extends Component {
             </Text>
           </Box>
           <Menu />
-        </Head>
+        </Box>
       </Flex>
     )
   }
